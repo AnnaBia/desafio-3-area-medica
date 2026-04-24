@@ -1,0 +1,32 @@
+{
+  "id": "PAC-2026-001",
+  "idade": 67,
+  "gestante": false,
+  "deficiencia": false,
+  "hora_entrada": "14:00",
+  "leituras": [
+    {
+      "hora": "14:00",
+      "consciente": true,
+      "glasgow": 15,
+      "spo2": 95,
+      "frequencia_cardiaca": 88,
+      "temperatura": 37.2,
+      "escala_dor": 3,
+      "vomitos_por_hora": 0,
+      "pulso_presente": true,
+      "respirando": true
+    },
+    {
+      "hora": "14:25",
+      "glasgow": 14,
+      "spo2": 89,
+      "frequencia_cardiaca": 122,
+      "temperatura": 38.6,
+      "escala_dor": 7,
+      "vomitos_por_hora": 2,
+      "pulso_presente": true,
+      "respirando": true
+    }
+  ]
+}

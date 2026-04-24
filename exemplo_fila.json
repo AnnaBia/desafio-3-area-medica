@@ -1,0 +1,64 @@
+[
+  {
+    "id": "PAC-2026-010",
+    "idade": 35,
+    "gestante": false,
+    "deficiencia": false,
+    "hora_entrada": "14:00",
+    "leituras": [
+      {
+        "hora": "14:00",
+        "glasgow": 15,
+        "spo2": 95,
+        "frequencia_cardiaca": 90,
+        "temperatura": 37.1,
+        "escala_dor": 6,
+        "vomitos_por_hora": 0,
+        "pulso_presente": true,
+        "respirando": true
+      },
+      {
+        "hora": "14:25",
+        "glasgow": 15,
+        "spo2": 94,
+        "frequencia_cardiaca": 92,
+        "temperatura": 37.3,
+        "escala_dor": 6,
+        "vomitos_por_hora": 0,
+        "pulso_presente": true,
+        "respirando": true
+      }
+    ]
+  },
+  {
+    "id": "PAC-2026-011",
+    "idade": 62,
+    "gestante": false,
+    "deficiencia": false,
+    "hora_entrada": "14:05",
+    "leituras": [
+      {
+        "hora": "14:05",
+        "glasgow": 15,
+        "spo2": 95,
+        "frequencia_cardiaca": 86,
+        "temperatura": 37.0,
+        "escala_dor": 3,
+        "vomitos_por_hora": 0,
+        "pulso_presente": true,
+        "respirando": true
+      },
+      {
+        "hora": "14:20",
+        "glasgow": 15,
+        "spo2": 94,
+        "frequencia_cardiaca": 90,
+        "temperatura": 38.2,
+        "escala_dor": 3,
+        "vomitos_por_hora": 0,
+        "pulso_presente": true,
+        "respirando": true
+      }
+    ]
+  }
+]
