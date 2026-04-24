@@ -20,7 +20,7 @@ Projeto desenvolvido para o desafio da disciplina de Inteligência Artificial (e
     cd desafio-3-area-medica
     ```
 
-3. Verifique a versão do Python:
+3. Valide a versão e o interpretador Python que será usado:
    Windows:
     ```bash
     py -3 --version
@@ -30,7 +30,57 @@ Projeto desenvolvido para o desafio da disciplina de Inteligência Artificial (e
     python3 --version
     ```
 
+    O sistema requer Python 3.10 ou superior.
+
 ## Uso
+
+Os arquivos `exemplo_paciente.json` e `exemplo_fila.json` são apenas demonstrações para facilitar o primeiro teste. O sistema funciona normalmente com arquivos JSON próprios.
+
+### Formato de entrada JSON
+
+Paciente único (sem `--fila`): enviar um objeto JSON.
+
+Campos esperados no objeto de paciente:
+- `id` (string): identificador do paciente.
+- `hora_entrada` (string, formato `HH:MM`): horário de chegada.
+- `idade` (número, opcional).
+- `gestante` (booleano, opcional).
+- `deficiencia` (booleano, opcional).
+- `leituras` (lista): histórico de leituras clínicas em ordem cronológica.
+
+Campos de cada leitura:
+- `hora` (string, formato `HH:MM`) - recomendado.
+- `spo2`, `frequencia_cardiaca`, `temperatura`, `escala_dor`, `glasgow`, `vomitos_por_hora` (numéricos, opcionais).
+- `pulso_presente`, `respirando`, `consciente` (booleanos, opcionais).
+
+Exemplo mínimo de paciente próprio:
+```json
+{
+    "id": "PAC-001",
+    "hora_entrada": "08:10",
+    "leituras": [
+        { "hora": "08:10", "spo2": 96, "escala_dor": 3 }
+    ]
+}
+```
+
+Modo fila (com `--fila`): pode receber um objeto único ou, preferencialmente, uma lista de objetos de paciente.
+
+Exemplo de fila própria:
+```json
+[
+    {
+        "id": "PAC-001",
+        "hora_entrada": "08:10",
+        "leituras": [{ "hora": "08:10", "spo2": 96 }]
+    },
+    {
+        "id": "PAC-002",
+        "hora_entrada": "08:12",
+        "leituras": [{ "hora": "08:12", "spo2": 92 }]
+    }
+]
+```
 
 1. Execute a classificação de um paciente (arquivo JSON com 1 paciente):
    Windows:
@@ -42,6 +92,16 @@ Projeto desenvolvido para o desafio da disciplina de Inteligência Artificial (e
     python3 main.py --entrada exemplo_paciente.json
     ```
 
+    Exemplo com arquivo próprio:
+    Windows:
+     ```bash
+     py -3 main.py --entrada meu_paciente.json
+     ```
+    Linux/macOS:
+     ```bash
+     python3 main.py --entrada meu_paciente.json
+     ```
+
 2. Execute em modo fila para desempate (arquivo JSON com lista de pacientes):
    Windows:
     ```bash
@@ -52,7 +112,18 @@ Projeto desenvolvido para o desafio da disciplina de Inteligência Artificial (e
     python3 main.py --entrada exemplo_fila.json --fila
     ```
 
+    Exemplo com arquivo próprio:
+    Windows:
+     ```bash
+     py -3 main.py --entrada minha_fila.json --fila
+     ```
+    Linux/macOS:
+     ```bash
+     python3 main.py --entrada minha_fila.json --fila
+     ```
+
 3. Execute a suíte de testes:
+    Esses testes automatizados validam os cenários principais do sistema, incluindo classificação, vulnerabilidade, regras de segunda ordem (E1 a E5) e desempate da fila.
    Windows:
     ```bash
     py -3 -m unittest discover -s tests -v
