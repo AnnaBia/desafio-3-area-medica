@@ -17,7 +17,7 @@ Projeto desenvolvido para o desafio da disciplina de Inteligência Artificial (e
 
 2. Navegue até o diretório do projeto:
     ```bash
-    cd desafio03-area-medica
+    cd desafio-3-area-medica
     ```
 
 3. Verifique a versão do Python:
