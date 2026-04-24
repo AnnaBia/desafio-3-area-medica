@@ -11,7 +11,7 @@ Projeto desenvolvido para o desafio da disciplina de Inteligência Artificial (e
 
 1. Clone o repositório para sua máquina local:
     ```bash
-    git clone <url-do-seu-repositorio>
+    git clone https://github.com/AnnaBia/desafio-3-area-medica.git
     ```
    Se você baixou o projeto em `.zip`, apenas extraia a pasta e siga para o passo 2.
 
